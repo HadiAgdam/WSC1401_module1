@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <KeyFrameSet></KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start"></ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end"></ConstraintSet>
+
+    <ConstraintSet android:id="@+id/textState1">
+        <Constraint
+            android:id="@id/textContainer1"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/textContainer2"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            motion:layout_constraintTop_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/textContainer3"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            motion:layout_constraintTop_toBottomOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/textState2">
+        <Constraint
+            android:id="@id/textContainer1"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            motion:layout_constraintBottom_toTopOf="parent"/>
+        <Constraint
+            android:id="@+id/textContainer2"
+            android:layout_height="128dp"
+            android:layout_width="match_parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+        <Constraint
+            android:id="@+id/textContainer3"
+            android:layout_height="128dp"
+            android:layout_width="match_parent"
+            motion:layout_constraintTop_toBottomOf="parent"/>
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/textState3">
+        <Constraint
+            android:id="@id/textContainer1"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            motion:layout_constraintBottom_toTopOf="parent"/>
+        <Constraint
+            android:id="@+id/textContainer2"
+            android:layout_height="128dp"
+            android:layout_width="match_parent"
+            motion:layout_constraintBottom_toTopOf="parent"/>
+        <Constraint
+            android:id="@+id/textContainer3"
+            android:layout_height="128dp"
+            android:layout_width="match_parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+    </ConstraintSet>
+
+
+</MotionScene>
