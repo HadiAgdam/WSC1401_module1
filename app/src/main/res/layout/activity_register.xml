@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/horizontalDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"/>
+
+    <TextView
+        style="@style/Text.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Hey there,"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/staticTitle" />
+
+    <TextView
+        android:id="@+id/staticTitle"
+        style="@style/Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Create an Account"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/horizontalDivider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nameAgeGenderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"
+        app:layout_constraintTop_toBottomOf="@id/staticTitle">
+
+        <LinearLayout
+            android:id="@+id/nameInputContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="48dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/genderContainer"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:textColorHint="@android:color/darker_gray"
+                android:id="@+id/nameInput"
+                style="@style/TextInput"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/name_icon"
+                android:hint="Full Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:textColorHint="@android:color/darker_gray"
+                android:id="@+id/ageInput"
+                style="@style/TextInput"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@drawable/calendar_icon"
+                android:hint="Age"
+                android:inputType="number"
+                android:maxLength="2" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/genderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameInputContainer">
+
+            <ImageView
+                android:id="@+id/maleGenderView"
+                android:layout_width="124dp"
+                android:layout_height="124dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/selected_input_background"
+                android:padding="36dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/gender_male_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/femaleGenderView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/maleCheckedIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/check_icon"
+                app:layout_constraintRight_toRightOf="@id/maleGenderView"
+                app:layout_constraintTop_toTopOf="@id/maleGenderView" />
+
+            <TextView
+                android:textStyle="bold"
+                style="@style/Text.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="@id/maleGenderView"
+                app:layout_constraintRight_toRightOf="@id/maleGenderView"
+                app:layout_constraintTop_toBottomOf="@id/maleGenderView" />
+
+
+            <ImageView
+                android:id="@+id/femaleGenderView"
+                android:layout_width="124dp"
+                android:layout_height="124dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/unselected_input_background"
+                android:padding="36dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/gender_female_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/maleGenderView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textStyle="bold"
+                style="@style/Text.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                app:layout_constraintLeft_toLeftOf="@id/femaleGenderView"
+                app:layout_constraintRight_toRightOf="@id/femaleGenderView"
+                app:layout_constraintTop_toBottomOf="@id/femaleGenderView" />
+
+            <ImageView
+                android:id="@+id/femaleCheckedIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/check_icon"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="@id/femaleGenderView"
+                app:layout_constraintTop_toTopOf="@id/femaleGenderView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/nextButtonMotionLayout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_margin="48dp"
+        android:background="@drawable/button_yellow_gradient_background"
+        app:layoutDescription="@xml/activity_intro_xml_nextbutton_scene"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/nextButtonText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nextButtonText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Confirm"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
