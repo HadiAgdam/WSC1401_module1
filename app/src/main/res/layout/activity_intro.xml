@@ -75,15 +75,15 @@
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/textMotionLayout"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:layout_marginBottom="48dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="24dp"
         app:layoutDescription="@xml/activity_intro_xml_textmotionlayout_scene"
         app:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout">
 
         <LinearLayout
             android:id="@+id/textContainer1"
             android:layout_width="match_parent"
-            android:layout_height="128dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -108,7 +108,7 @@
         <LinearLayout
             android:id="@+id/textContainer2"
             android:layout_width="match_parent"
-            android:layout_height="128dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -133,7 +133,7 @@
         <LinearLayout
             android:id="@+id/textContainer3"
             android:layout_width="match_parent"
-            android:layout_height="128dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="24dp"
             app:layout_constraintBottom_toBottomOf="parent"

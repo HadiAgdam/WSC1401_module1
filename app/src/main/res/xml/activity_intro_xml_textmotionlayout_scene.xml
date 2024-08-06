@@ -19,13 +19,14 @@
             android:id="@id/textContainer1"
             android:layout_width="match_parent"
             android:layout_height="128dp"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
         <Constraint
             android:alpha="0"
             android:id="@+id/textContainer2"
             android:layout_width="match_parent"
             android:layout_height="128dp"
-            motion:layout_constraintTop_toBottomOf="parent" />
+            motion:layout_constraintBottom_toBottomOf="parent" />
         <Constraint
             android:alpha="0"
             android:id="@+id/textContainer3"
@@ -40,19 +41,20 @@
             android:id="@id/textContainer1"
             android:layout_width="match_parent"
             android:layout_height="128dp"
-            motion:layout_constraintBottom_toTopOf="parent"/>
+            motion:layout_constraintTop_toTopOf="parent"/>
         <Constraint
             android:alpha="1"
             android:id="@+id/textContainer2"
             android:layout_height="128dp"
             android:layout_width="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent"/>
         <Constraint
             android:alpha="0"
             android:id="@+id/textContainer3"
             android:layout_height="128dp"
             android:layout_width="match_parent"
-            motion:layout_constraintTop_toBottomOf="parent"/>
+            motion:layout_constraintBottom_toBottomOf="parent"/>
     </ConstraintSet>
 
 
@@ -68,12 +70,13 @@
             android:id="@+id/textContainer2"
             android:layout_height="128dp"
             android:layout_width="match_parent"
-            motion:layout_constraintBottom_toTopOf="parent"/>
+            motion:layout_constraintTop_toTopOf="parent"/>
         <Constraint
             android:alpha="1"
             android:id="@+id/textContainer3"
             android:layout_height="128dp"
             android:layout_width="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent"/>
     </ConstraintSet>
 
