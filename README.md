@@ -10,19 +10,3 @@ This project is a recreation of the Android application presented during the Wor
 - **Smooth Transitions**: Includes seamless transitions between different states of views.
 - **Interactive UI Elements**: Showcases user interactions triggering animations.
 
-## APK Download
-
-You can download the APK file for this app from the [Releases](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases) page.
-
-## Screenshots
-
-Here are some screenshots of the app:
-
-![Screenshot 1](path/to/screenshot1.png)
-*Description of screenshot 1*
-
-![Screenshot 2](path/to/screenshot2.png)
-*Description of screenshot 2*
-
-![Screenshot 3](path/to/screenshot3.png)
-*Description of screenshot 3*
