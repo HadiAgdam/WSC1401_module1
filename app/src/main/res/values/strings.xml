@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WSC1401_module1</string>
+    <string name="long_text">
+        The quick brown fox jumps over the lazy dog. The quick
+        brown fox jumps over the lazy dog.
+    </string>
 </resources>
