@@ -3,4 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#F1B81A</color>
+    <color name="progress_blue">#528FD6</color>
+    <color name="progress_green">#14B66A</color>
+    <color name="orange">#F57600</color>
 </resources>
