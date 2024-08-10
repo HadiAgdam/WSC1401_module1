@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><!-- res/drawable/custom_progress.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:height="2dp"
+        android:gravity="center">
+        <shape>
+            <corners android:radius="30dp" />
+            <solid android:color="#CCCCCC" />
+        </shape>
+    </item>
+    <item
+        android:id="@android:id/progress"
+        android:height="2dp"
+        android:gravity="center">
+        <clip>
+            <shape>
+                <corners android:radius="30dp" />
+                <solid android:color="#CCCCCC" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

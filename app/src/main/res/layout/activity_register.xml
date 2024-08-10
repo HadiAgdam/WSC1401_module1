@@ -22,12 +22,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <!--  Title Container  -->
     <LinearLayout
         android:id="@+id/titleContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@id/horizontalDivider"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -49,11 +49,12 @@
             android:textColor="@color/black" />
     </LinearLayout>
 
+    <!--  Name And Gender Container  -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/nameAgeGenderContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"
         app:layout_constraintTop_toBottomOf="@id/titleContainer">
 
@@ -170,14 +171,175 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--  Height and Weight Container  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/heightWeightContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"
+        app:layout_constraintTop_toBottomOf="@id/titleContainer">
+
+        <View
+            android:id="@+id/heightWeightHorizontalDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/man_icon"
+            app:layout_constraintBottom_toTopOf="@id/heightSeekbar"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50cm"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heightSeekbar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="250cm"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heightSeekbar" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/man_icon"
+            app:layout_constraintBottom_toTopOf="@id/heightSeekbar"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <TextView
+            android:id="@+id/heightProgressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="180cm"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@id/heightSeekbar"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintStart_toStartOf="@id/heightSeekbar"
+            app:layout_constraintEnd_toEndOf="@id/heightSeekbar"/>
+
+
+        <SeekBar
+            android:id="@+id/heightSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="250"
+            android:layout_marginHorizontal="24dp"
+            android:min="50"
+            android:progress="180"
+            android:progressDrawable="@drawable/costume_progress_background"
+            android:thumb="@drawable/costume_progress_thumb"
+            app:layout_constraintBottom_toTopOf="@id/heightWeightHorizontalDivider"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heightWeightHorizontalDivider" />
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="28dp"
+            android:layout_margin="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/man_icon"
+            app:layout_constraintBottom_toTopOf="@id/weightSeekbar"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="28dp"
+            android:layout_margin="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/man_icon"
+            app:layout_constraintBottom_toTopOf="@id/weightSeekbar"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/weightProgressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80kg"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@id/weightSeekbar"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintStart_toStartOf="@id/weightSeekbar"
+            app:layout_constraintEnd_toEndOf="@id/weightSeekbar"/>
+
+
+        <SeekBar
+            android:id="@+id/weightSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200"
+            android:min="20"
+            android:progress="80"
+            android:progressDrawable="@drawable/costume_progress_background"
+            android:thumb="@drawable/costume_progress_thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heightWeightHorizontalDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20kg"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weightSeekbar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200kg"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weightSeekbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--  Yellow Top Vector  -->
     <ImageView
         android:id="@+id/topVector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
         android:src="@drawable/yellow_top_vector"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--  Bmi Rate Container  -->
     <LinearLayout
         android:id="@+id/bmiRateContainer"
         android:layout_width="match_parent"
@@ -185,6 +347,7 @@
         android:layout_marginVertical="24dp"
         android:gravity="center"
         android:orientation="vertical"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout">
 
         <TextView
@@ -333,16 +496,18 @@
 
     </LinearLayout>
 
+    <!--  Running Person  -->
     <ImageView
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/running_person_image"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/bmiRateContainer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--  Next Button  -->
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/nextButtonMotionLayout"
         android:layout_width="0dp"
