@@ -1,5 +1,6 @@
 package ir.hadiagdamapps.wsc1401_module1
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -27,7 +28,7 @@ class IntroActivity : AppCompatActivity() {
     private val duration: Int = 300
 
     private fun end() {
-        Toast.makeText(this, "END", Toast.LENGTH_LONG).show()
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

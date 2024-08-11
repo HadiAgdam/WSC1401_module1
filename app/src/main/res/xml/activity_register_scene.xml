@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <KeyFrameSet></KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start"></ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end"></ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/nameAgeGenderMotionSet">
+        <Constraint
+            android:id="@id/titleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:orientation="vertical"
+            motion:layout_constraintBottom_toTopOf="@id/horizontalDivider"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/nameAgeGenderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"
+            motion:layout_constraintTop_toBottomOf="@id/titleContainer" />
+
+        <Constraint
+            android:id="@id/nextButtonMotionLayout"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="48dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent" />
+
+        <Constraint
+            android:id="@id/heightWeightContainer"
+            android:layout_width="240dp"
+            android:layout_height="0dp"
+            android:paddingHorizontal="24dp"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"
+            motion:layout_constraintLeft_toRightOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/titleContainer" />
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/heightWeightMotionSet">
+        <Constraint
+            android:id="@id/titleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:orientation="vertical"
+            motion:layout_constraintBottom_toTopOf="@id/horizontalDivider"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/heightWeightContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingHorizontal="24dp"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"
+            motion:layout_constraintTop_toBottomOf="@id/titleContainer" />
+
+        <Constraint
+            android:id="@id/nameAgeGenderContainer"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"
+            motion:layout_constraintRight_toLeftOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/titleContainer" />
+
+        <Constraint
+            android:id="@id/nextButtonMotionLayout"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="48dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent" />
+
+        <Constraint
+            android:id="@+id/topVector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/yellow_top_vector"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toTopOf="parent"/>
+
+        <Constraint
+            android:layout_marginTop="24dp"
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/running_person_image"
+            motion:layout_constraintLeft_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint
+            android:id="@+id/bmiRateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginVertical="24dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/bmiRateMotionSet">
+        <Constraint
+            android:id="@id/heightWeightContainer"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            motion:layout_constraintRight_toLeftOf="parent"
+            motion:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"
+            motion:layout_constraintTop_toBottomOf="@id/titleContainer" />
+
+        <Constraint
+            android:id="@+id/topVector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/yellow_top_vector"
+            android:visibility="visible"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint
+            android:id="@id/nextButtonMotionLayout"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="48dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent" />
+
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/running_person_image"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintBottom_toTopOf="@id/bmiRateContainer"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint
+            android:id="@+id/bmiRateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginVertical="24dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toTopOf="@id/nextButtonMotionLayout"/>
+    </ConstraintSet>
+
+
+</MotionScene>
