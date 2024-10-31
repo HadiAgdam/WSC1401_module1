@@ -57,13 +57,13 @@ To set up and run the project, follow these steps:
 Below are some screenshots showcasing the app's UI:
 
 <img src="screenshots/intro/intro1.png" alt="Intro 1" width="400"/>
-*Itro 1*
+*Intro 1*
 
 <img src="screenshots/intro/intro2.png" alt="Intro 2" width="400"/>
-*Itro 2*
+*Intro 2*
 
 <img src="screenshots/intro/intro3.png" alt="Intro 3" width="400"/>
-*Itro 3*
+*Intro 3*
 
 <img src="screenshots/register/nameAgeGender.png" alt="Name, age and gender form" width="400"/>
 *Name, age and gender form*
