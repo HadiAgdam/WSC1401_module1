@@ -31,7 +31,7 @@ To set up and run the project, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone [WSC1401 Module1](https://github.com/HadiAgdam/WSC1401_module1.git)
+    git clone https://github.com/HadiAgdam/WSC1401_module1.git
     ```
 
 2. **Open the Project**:
